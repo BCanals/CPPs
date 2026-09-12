@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: becanals <becanals@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 21:23:16 by becanals          #+#    #+#             */
-/*   Updated: 2026/09/11 17:18:30 by becanals         ###   ########.fr       */
+/*   Updated: 2026/09/11 23:08:07 by becanals         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 
 int main(int argc, char **argv)
 {
+	std::string s;
+
+	if (s.size() == 0)
+		std::cout << "yep, it words\n";
+
+
 	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		std::cout << s;
 	else 
 	{
 		for (int i = 1; i < argc; i++)
