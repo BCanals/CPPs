@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 22:46:42 by becanals          #+#    #+#             */
-/*   Updated: 2026/09/12 12:28:35 by becanals         ###   ########.fr       */
+/*   Updated: 2026/09/15 22:06:07 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 # define CONTACT
 # include <string>
 # include <iostream>
+# include <cstdlib>
 
 class Contact
 {
 	private:
-		std::string name;
-		
+		std::string	FirstName;
+		std::string	LastName;
+		std::string	NickName;
+		std::string	PhoneNumber;
+		std::string	DarkestSecret;
 
 	public:
-		
 		void		writeDetails();
-		std::string	getName();
 		bool		isEmpty();
+		bool		addInfo();
 };
 
 #endif

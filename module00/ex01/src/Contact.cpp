@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 22:47:00 by becanals          #+#    #+#             */
-/*   Updated: 2026/09/12 12:29:28 by becanals         ###   ########.fr       */
+/*   Updated: 2026/09/15 22:08:09 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,16 @@ void	Contact::writeDetails()
 	std::cout << "write_details is WIP" << std::endl;
 }
 
-std::string Contact::getName()
+bool	Contact::isEmpty()
 {
-	return name;
-}
-
-bool Contact::isEmpty()
-{
-	if (name.size() == 0)
+	if (FirstName.size() == 0)
 		return true;
 	return false;
+}
+
+bool	Contact::addInfo()
+{
+	std::system("clear");
+	std::cout << "adding Info" << std::endl;
+	return (true);
 }
