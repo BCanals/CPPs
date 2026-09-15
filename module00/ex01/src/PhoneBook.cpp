@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 22:23:44 by becanals          #+#    #+#             */
-/*   Updated: 2026/09/12 12:27:35 by becanals         ###   ########.fr       */
+/*   Updated: 2026/09/15 21:03:54 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,23 @@ PhoneBook::PhoneBook()
 	_oldest_c = 0;
 }
 
-void	PhoneBook::add_contact(Contact contact)
-{
-	_contacts[_oldest_c] = contact;
-	_oldest_c++;
-	_oldest_c %= 8;
-}
-
 void	PhoneBook::show_contact(int index)
 {
 	_contacts[index].writeDetails();
 }
 
-void	PhoneBook::list_contacts()
+void	PhoneBook::AddContact()
+{
+	std::cout << "Adding Contact..." << std::endl;
+	//_contacts[_oldest_c] = contact;
+	//_oldest_c++;
+	//_oldest_c %= 8;
+}
+
+void	PhoneBook::Search()
 {
 	int	j;
+	std::cout << "Searching..." << std::endl;
 
 	for (int i = 1; i <= 8; i++)
 	{
@@ -46,3 +48,5 @@ void	PhoneBook::list_contacts()
 		write_c_on_list(_contacts[j]);
 	}
 }
+
+

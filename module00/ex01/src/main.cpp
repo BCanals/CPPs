@@ -6,33 +6,41 @@
 /*   By: becanals <becanals@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 21:23:16 by becanals          #+#    #+#             */
-/*   Updated: 2026/09/11 23:08:07 by becanals         ###   ########.fr       */
+/*   Updated: 2026/09/15 21:04:59 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv)
+void	print_help();
+
+int main()
 {
-	std::string s;
+	PhoneBook	d;
+	std::string	input;
 
-	if (s.size() == 0)
-		std::cout << "yep, it words\n";
-
-
-	if (argc == 1)
-		std::cout << s;
-	else 
+	while (1)
 	{
-		for (int i = 1; i < argc; i++)
+		std::cout << "Waiting for comand: ";
+		std::cin >> input;
+		if (input == "EXIT")
 		{
-			for (int j = 0; argv[i][j]; j++)
-			{
-				std::cout << (char)toupper(argv[i][j]);
-			}
+			std::cout << "See you soon! :)" << std::endl;
+			break ;
 		}
-		std::cout << "\n";
+		else if (input == "ADD")
+			d.AddContact();
+		else if (input == "SEARCH")
+			d.Search();
+		else 
+			print_help();
 	}
-	return (0);
+}
+
+void	print_help()
+{
+	std::cout << "try again!" << std::endl;
 }
