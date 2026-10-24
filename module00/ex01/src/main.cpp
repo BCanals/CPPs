@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 21:23:16 by becanals          #+#    #+#             */
-/*   Updated: 2026/09/15 21:04:59 by bizcru           ###   ########.fr       */
+/*   Updated: 2026/10/24 14:58:02 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ int main()
 
 void	print_help()
 {
-	std::cout << "try again!" << std::endl;
+	std::cout << "invalid input, try again!" << std::endl;
 }
