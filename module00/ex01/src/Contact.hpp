@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 22:46:42 by becanals          #+#    #+#             */
-/*   Updated: 2026/10/24 16:46:49 by bizcru           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:18:58 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,21 @@
 class Contact
 {
 	private:
-		std::string	FirstName;
-		std::string	LastName;
-		std::string	NickName;
-		std::string	PhoneNumber;
-		std::string	DarkestSecret;
+		std::string	_FirstName;
+		std::string	_LastName;
+		std::string	_NickName;
+		std::string	_PhoneNumber;
+		std::string	_DarkestSecret;
+		bool		_setMemberValue(std::string, std::string *);
 
 	public:
-		bool	setMemberValue(std::string, std::string *);
-		bool	isEmpty();
-		bool	addInfo();
-		bool	writeDetails();
-		bool	setFirstName();
-		bool	setLastName();
-		bool	setNickName();
-		bool	setPhoneNumber();
-		bool	setDarkestSecret();
+		bool		isEmpty();
+		bool		loadInfo();
+		std::string	getFirstName();
+		std::string	getLastName();
+		std::string	getNickName();
+		std::string	getPhoneNumber();
+		std::string	getDarkestSecret();
 };
 
 #endif

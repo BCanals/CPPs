@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 21:23:16 by becanals          #+#    #+#             */
-/*   Updated: 2026/10/24 14:58:02 by bizcru           ###   ########.fr       */
+/*   Updated: 2026/10/25 11:17:37 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int main()
 	{
 		std::cout << "Waiting for comand: ";
 		std::cin >> input;
+		std::cin.ignore();
 		if (input == "EXIT")
 		{
 			std::cout << "See you soon! :)" << std::endl;

@@ -1,1 +1,0 @@
-phonebook.cpp en lloc de isEmpty es pot fer servir directament .FirstName.empty()?

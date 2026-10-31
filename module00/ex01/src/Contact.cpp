@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 22:47:00 by becanals          #+#    #+#             */
-/*   Updated: 2026/10/24 17:00:54 by bizcru           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:18:49 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,55 +14,30 @@
 
 bool	Contact::isEmpty()
 {
-	if (FirstName.size() == 0)
-		return true;
-	return false;
+	return this->_FirstName.empty();
 }
 
-bool	Contact::writeDetails()
-{
-	std::cout << "Writing details..." << std::endl;
-	return (true);
-}
-
-bool	errorAddingInfo()
-{
-	std::string	forget;
-
-	std::cout << "Sorry, no fields can be empty!" << std::endl;
-	std::cout << "Press enter to continue..." << std::endl;
-	std::getline(std::cin, forget);
-	std::system("clear");
-	return (false);
-}
-
-bool	Contact::addInfo()
+bool	Contact::loadInfo()
 {
 	Contact		tmp;
-	std::string	forget;
 
 	std::system("clear");
 	std::cout << "Adding Contact..." << std::endl << std::endl;
-	std::cin.ignore();
-	if (!tmp.setMemberValue("First Name", &(tmp.FirstName)))
-		return (errorAddingInfo());
-	if (!tmp.setMemberValue("Last Name", &(tmp.LastName)))
-		return (errorAddingInfo());
-	if (!tmp.setMemberValue("Nick Name", &(tmp.NickName)))
-		return (errorAddingInfo());
-	if (!tmp.setMemberValue("Phone Number", &(tmp.PhoneNumber)))
-		return (errorAddingInfo());
-	if (!tmp.setMemberValue("Darkest Secret", &(tmp.DarkestSecret)))
-		return (errorAddingInfo());
-	*this = tmp;
-	std::cout << "Contact succesfully added!" << std::endl;
-	std::cout << "Press enter to continue..." << std::endl;
-	std::getline(std::cin, forget);
-	std::system("clear");
+	if (!tmp._setMemberValue("First Name", &(tmp._FirstName)))
+		return (false);
+	if (!tmp._setMemberValue("Last Name", &(tmp._LastName)))
+		return (false);
+	if (!tmp._setMemberValue("Nick Name", &(tmp._NickName)))
+		return (false);
+	if (!tmp._setMemberValue("Phone Number", &(tmp._PhoneNumber)))
+		return (false);
+	if (!tmp._setMemberValue("Darkest Secret", &(tmp._DarkestSecret)))
+		return (false);
+	(*this) = tmp;
 	return (true);
 }
 
-bool	Contact::setMemberValue(std::string name, std::string *str)
+bool	Contact::_setMemberValue(std::string name, std::string *str)
 {
 	std::cout << "Please input the " << name << ": ";
 	std::getline(std::cin, *str);
@@ -70,4 +45,29 @@ bool	Contact::setMemberValue(std::string name, std::string *str)
 	if ((*str).empty())
 		return (false);
 	return (true);
+}
+
+std::string	Contact::getFirstName()
+{
+	return (_FirstName);
+}
+
+std::string	Contact::getLastName()
+{
+	return (_LastName);
+}
+
+std::string	Contact::getNickName()
+{
+	return (_NickName);
+}
+
+std::string	Contact::getPhoneNumber()
+{
+	return (_PhoneNumber);
+}
+
+std::string	Contact::getDarkestSecret()
+{
+	return (_DarkestSecret);
 }

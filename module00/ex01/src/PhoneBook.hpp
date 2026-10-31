@@ -6,7 +6,7 @@
 /*   By: becanals <becanals@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 20:18:56 by becanals          #+#    #+#             */
-/*   Updated: 2026/09/15 20:54:17 by bizcru           ###   ########.fr       */
+/*   Updated: 2026/10/31 16:31:52 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ class PhoneBook
 	private:
 		Contact	_contacts[8];
 		int		_oldest_c;
-		void	show_contact(int index);
+		void	_printSummaryTable();
+		void	_printContactDetails(int);
 
 	public:
 		PhoneBook();
-
+		bool	isEmpty();
 		void	AddContact();
 		void	Search();
 };
